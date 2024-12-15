@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Unbounded, Inter } from "next/font/google";
+import { Unbounded, Inter } from "next/font/google";
 import Header from "@/components/header";
 import "./globals.css";
 
@@ -24,7 +24,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${unbounded.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${unbounded.variable} antialiased font-sans`}
+      >
         <Header />
         {children}
       </body>

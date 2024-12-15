@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "../images/wcu_logo5.png";
+import Unsere from "../images/unsere.png";
+import Ziele from "../images/ziele.png";
+import UserCard from "@/components/userCard/UserCard";
+import Sab from "../images/sabine.jpg";
+import Gud from "../images/gudenus.jpg";
 
 export default function Home() {
   return (
@@ -34,14 +40,52 @@ export default function Home() {
           className={`h-[600px] bg-[url('../images/image_8.png')] bg-no-repeat bg-cover flex flex-col items-center justify-center bg-black bg-fixed`}
         >
           <div className="container">
-            <h2 className="text-7xl text-amber-100 font-black text-center">
+            <h2 className="font-heading text-7xl text-text-primary font-black text-center">
               ÜBER UNS
             </h2>
-            <p className="text-amber-200 text-xl pt-10 text-center">
+            <p className="text-text-secondary text-xl pt-10 text-center">
               Der Weltkongress der Ukrainer für Frieden und Wiederaufbau ist
               eine freiwillige Gemeinschaft aller Menschen guten Willens zur
               Förderung des Friedens in der Ukraine zum Wohle der Menschheit.
             </p>
+          </div>
+        </section>
+        <section
+          className={`h-screen bg-[url('../images/bergen.jpg')] bg-no-repeat bg-cover flex flex-col items-center justify-center bg-black bg-fixed`}
+        >
+          <div className="w-full px-[50px]">
+            <div className="flex flex-row justify-between w-full py-50px">
+              <UserCard
+                image={Gud}
+                name={"Johann Lorentz Gudenus"}
+                role={"Präsident"}
+                description={
+                  "Vizepräsident der „Historischen Monumente - Österreichs Gärten“."
+                }
+              />
+              <div
+                id="icon"
+                className="icon w-[200px] h-[200px] flex items-center justify-center"
+              >
+                <Image src={Logo} alt="Icon" />
+              </div>{" "}
+              <UserCard
+                image={Sab}
+                name={"Priv. Doz. Dr. Sabina Savcenco"}
+                role={"Sekretärin"}
+                description={
+                  "Fachärztin für Urologie bei Sozialmedizinisches Zentrum Ost - Donauspital."
+                }
+              />
+            </div>
+          </div>
+        </section>
+        <section className=" bg-[#242929]">
+          <div className="w-full py-10 flex flex-row justify-center items-center">
+            <div className="flex flex-row justify-center">
+              <Image src={Unsere} alt="unsere " className="" />
+              <Image src={Ziele} alt="Ziele" className="" />
+            </div>
           </div>
         </section>
       </main>
