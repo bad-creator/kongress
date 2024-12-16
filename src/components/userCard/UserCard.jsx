@@ -10,20 +10,20 @@ const UserCard = ({ image, name, role, description }) => {
         height={"153"}
         src={image}
         alt={`${name}'s avatar`}
-        className="w-36 h-36 rounded-full object-cover"
+        className="w-36 h-36 lg:w-52 lg:h-52 rounded-full object-cover"
       />
 
       {/* Имя пользователя */}
-      <h2 className="text-lg font-bold text-white text-center mt-2">{name}</h2>
+      <h2 className="text-xl font-bold text-white text-center mt-2">{name}</h2>
 
       {/* Роль в компании */}
-      <p className="text-sm text-text-secondary text-center">{role}</p>
+      <p className=" text-text-secondary text-center">{role}</p>
 
       {/* Разделительная линия */}
       <hr className="w-full border-text-primary my-2" />
 
       {/* Описание */}
-      <p className="text-text-primary text-sm text-center">{description}</p>
+      <p className="text-text-primary text-center">{description}</p>
     </div>
   );
 };

@@ -16,25 +16,23 @@ import Kopf from "../images/kopf.png";
 export default function Home() {
   return (
     <main className="">
-      <section
-        className={`h-screen bg-[url('../images/headerImg.png')] bg-no-repeat bg-cover flex flex-col items-center justify-center bg-black bg-fixed`}
-      >
-        <div className="container">
-          <h1 className="font-heading text-5xl text-text-primary font-bold">
+      <section className="h-screen bg-[url('../images/headerImg.png')] bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center md:bg-fixed">
+        <div className="container mx-auto px-2 lg:px-12 2xl:max-w-[1280px]">
+          <h1 className="font-heading text-5xl md:text-6xl md:leading-relaxed text-text-primary font-bold leading-normal xl:text-7xl">
             Der Kongress im Überblick
           </h1>
-          <p className="text-text-secondary text-xl pt-20">
+          <p className="text-text-secondary text-xl pt-8">
             “Frieden kann nicht mit Gewalt erzwungen werden. Er muss durch
             Dialog, Gerechtigkeit und Achtung der Menschenrechte aufgebaut
             werden.”
           </p>
 
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-start gap-8 pt-8 md:flex-row md:justify-between md:items-end">
             <h2 className="text-text-primary text-2xl font-semibold">
               Jorge Mario Bergoglio
             </h2>
             <Link href="/">
-              <div className="rounded-xl inline border-2 border-text-secondary p-2 px-7">
+              <div className="rounded-xl inline border-2 border-text-secondary p-2 px-7 text-3xl hover:bg-text-secondary hover:py-3 hover:text-black transition duration-400 ease-in-out">
                 Spenden
               </div>
             </Link>
@@ -42,13 +40,13 @@ export default function Home() {
         </div>
       </section>
       <section
-        className={`h-[600px] bg-[url('../images/image_8.png')] bg-no-repeat bg-cover flex flex-col items-center justify-center bg-black bg-fixed`}
+        className={`h-[600px] bg-[url('../images/image_8.png')] bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center bg-black md:bg-fixed`}
       >
-        <div className="container">
-          <h2 className="font-heading text-7xl text-text-primary font-black text-center">
+        <div className="container mx-auto px-2 lg:px-12 max-w-[1280px]">
+          <h2 className="font-heading text-4xl text-text-primary font-medium text-center">
             ÜBER UNS
           </h2>
-          <p className="text-text-secondary text-xl pt-10 text-center">
+          <p className="text-text-primary text-2xl pt-10 text-center">
             Der Weltkongress der Ukrainer für Frieden und Wiederaufbau ist eine
             freiwillige Gemeinschaft aller Menschen guten Willens zur Förderung
             des Friedens in der Ukraine zum Wohle der Menschheit.
@@ -56,10 +54,10 @@ export default function Home() {
         </div>
       </section>
       <section
-        className={`h-screen bg-[url('../images/bergen.jpg')] bg-no-repeat bg-cover flex flex-col items-center justify-center bg-black bg-fixed`}
+        className={`h-screen bg-[url('../images/bergen.jpg')] bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center md:bg-fixed`}
       >
-        <div className="w-full px-[50px]">
-          <div className="flex flex-row justify-between w-full py-50px">
+        <div className="w-full px-[50px] max-w-[1280px]">
+          <div className="flex flex-col md:flex-row justify-between gap-14 items-center w-full py-50px">
             <UserCard
               image={Gud}
               name={"Johann Lorentz Gudenus"}
@@ -70,7 +68,7 @@ export default function Home() {
             />
             <div
               id="icon"
-              className="icon w-[200px] h-[200px] flex items-center justify-center"
+              className="icon w-[200px] h-[200px] md:flex items-center justify-center hidden"
             >
               <Image src={Logo} alt="Icon" />
             </div>{" "}
@@ -87,16 +85,19 @@ export default function Home() {
       </section>
       <section
         id="goals"
-        className="scroll-mt-[100px] bg-[#242929] pb-[200px] px-[50px]"
+        className="scroll-mt-[100px] bg-[#242929]  md:px-[50px]"
       >
-        <div className="w-full py-10 flex flex-row justify-center items-center">
-          <div className="flex flex-row justify-center">
+        <div className="w-screen md:w-full md:py-10 flex flex-row justify-center items-center">
+          <div className="flex flex-row justify-center relative">
             <Image src={Unsere} alt="unsere " className="" />
-            <Image src={Ziele} alt="Ziele" className="" />
+            <Image src={Ziele} alt="Ziele" className="hidden md:block" />
+            <h2 className="text-accent absolute text-3xl font-bold md:hidden font-heading top-[90px] right-1 ">
+              ZIELE
+            </h2>
           </div>
         </div>
-        <div className="flex gap-[100px] px-[100px]">
-          <div className="flex flex-col gap-4 pt-[100px]">
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-[300px] md:px-[100px]">
+          <div className="flex flex-col gap-4 pt-8 px-4 md:pt-[100px] md:text-2xl text-xl">
             <p className="text-text-secondary">
               Der Weltkongress der Ukrainer für Frieden und Wiederaufbau setzt
               sich für eine friedliche und stabile Zukunft der Ukraine ein.
@@ -112,46 +113,61 @@ export default function Home() {
               legen.
             </p>
           </div>
-          <Image src={Hands} alt="hands" />
+          <Image src={Hands} alt="hands" className="px-4" />
         </div>
       </section>
+      <div className="w-screen h-[100px] bg-[#242929]">
+        <div className="triangle-bottom-left"></div>
+        <div className="triangle-bottom-right"></div>
+      </div>
 
-      <section className="bg-accent flex flex-row">
-        <Image src={Mission} alt="mission foto" />
-        <div className="">
-          <h2 className="font-heading text-[#242929]">UNSERE MISSION</h2>
-          <hr />
-          <p>
-            Menschen, die Frieden wollen, Mütter von im Krieg gefallenen Söhnen,
-            informierten uns über das Bestreben, eine neue Regierung und eine
-            neue Verfassung der Ukraine zu schaffen, die auf christlichen Werten
-            und auf den Erfahrungen der österreichischen Regelung während des
-            Zweiten Weltkriegs basieren.
-          </p>
-          <p>
-            Wir rufen alle Menschen guten Willens auf, zur Sache des Friedens
-            und zur Beendigung des Blutvergießens zum Wohle der gesamten
-            Menschheit beizutragen.
-          </p>
+      <section className="bg-accent">
+        <div className="flex md:flex-row flex-col-reverse max-w-[1280px] mx-auto">
+          <Image
+            src={Mission}
+            alt="mission foto"
+            className="py-8 px-4 lg:w-[50%]"
+          />
+          <div className="px-4">
+            <h2 className="font-heading text-[#242929] font-bold text-4xl md:text-5xl py-4 pt-8">
+              UNSERE MISSION
+            </h2>
+            <hr />
+            <p className="pt-4 md:text-xl">
+              Menschen, die Frieden wollen, Mütter von im Krieg gefallenen
+              Söhnen, informierten uns über das Bestreben, eine neue Regierung
+              und eine neue Verfassung der Ukraine zu schaffen, die auf
+              christlichen Werten und auf den Erfahrungen der österreichischen
+              Regelung während des Zweiten Weltkriegs basieren.
+            </p>
+            <p className="pt-4 pb-8 md:text-xl">
+              Wir rufen alle Menschen guten Willens auf, zur Sache des Friedens
+              und zur Beendigung des Blutvergießens zum Wohle der gesamten
+              Menschheit beizutragen.
+            </p>
+          </div>
         </div>
       </section>
       <section
         id="values"
-        className="scroll-mt-[100px] bg-[url('../images/werte.png')] h-screen bg-no-repeat bg-cover flex flex-col items-center justify-center"
+        className="scroll-mt-[100px] bg-[url('../images/werte.png')] h-screen bg-no-repeat bg-cover bg-center"
       >
-        <h2 className="font-heading text-[5rem] font-bold text-text-primary">
-          UNSERE WERTE
-        </h2>
-        <p className="text-text-secondary">
-          Denn so sehr hat Gott die Welt geliebt, dass er seinen eingeborenen
-          Sohn hingab, damit alle, die an ihn glauben, nicht verloren werden,
-          sondern ewiges Leben haben. Denn Gott hat seinen Sohn nicht in die
-          Welt gesandt, um die Welt zu verurteilen, sondern damit die Welt durch
-          ihn gerettet wird.
-        </p>
-        <p className="text-accent font-semibold">Johannes 3:16-17 ESV</p>
+        <div className="flex flex-col justify-center h-full mx-auto px-4">
+          <h2 className="font-heading text-4xl md:text-[5rem] font-bold text-text-primary md:text-center">
+            UNSERE WERTE
+          </h2>
+          <h3 className="text-text-primary text-[16rem] hidden">"</h3>
+          <p className="text-text-secondary text-xl md:w-[50%] pt-8 md:pt-10 md:text-right">
+            Denn so sehr hat Gott die Welt geliebt, dass er seinen eingeborenen
+            Sohn hingab, damit alle, die an ihn glauben, nicht verloren werden,
+            sondern ewiges Leben haben. Denn Gott hat seinen Sohn nicht in die
+            Welt gesandt, um die Welt zu verurteilen, sondern damit die Welt
+            durch ihn gerettet wird.
+          </p>
+          <p className="text-accent font-semibold">Johannes 3:16-17 ESV</p>
+        </div>
       </section>
-      <section className="bg-[url('../images/marmor.png')] min-h-screen bg-no-repeat bg-cover grid gap-x-4 grid-cols-2 grid-rows-4">
+      {/* <section className="bg-[url('../images/marmor.png')] min-h-screen bg-no-repeat bg-cover grid gap-x-4 grid-cols-2 grid-rows-4">
         <Image src={KindHands} alt="kinder hände" />
         <div className="flex flex-col justify-center">
           <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
@@ -249,7 +265,7 @@ export default function Home() {
             BAWAATWW
           </p>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
