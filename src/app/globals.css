@@ -9,6 +9,7 @@
   --primary: #f5f5dc;
   --secondary: #efc88b;
   --secondary-hover: #ffdf3f;
+  --accent: #e1634f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,8 +19,59 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.triangle-bottom-right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 0px 100px 50vw;
+  border-color: transparent transparent var(--accent) transparent;
+}
+.triangle-bottom-left {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 0px 0px 50vw;
+  border-color: transparent transparent transparent var(--accent);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%; /* Занимает всю ширину контейнера */
+  padding: 10px 15px; /* Внутренние отступы */
+  font-size: 16px; /* Размер шрифта */
+  color: #333; /* Цвет текста */
+  border: 1px solid #ccc; /* Цвет рамки */
+  border-radius: 5px; /* Скругленные углы */
+  outline: none; /* Убирает стандартный фокус */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+form label {
+  padding-top: 20px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  border-color: #007bff; /* Цвет рамки при фокусе */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+
+form > button {
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 40px;
 }

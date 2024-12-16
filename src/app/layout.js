@@ -1,6 +1,7 @@
 import { Unbounded, Inter } from "next/font/google";
 import Header from "@/components/header";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 // Импортируем Inter
 const inter = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

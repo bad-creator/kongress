@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: "var(--accent)",
         text: {
           primary: "var(--primary)", // Основной цвет текста
           secondary: "var(--secondary)", // Вторичный цвет текста

@@ -17,9 +17,9 @@ const Header = () => {
   };
 
   const menuItems = [
-    { label: "Ziele", href: "/" },
-    { label: "Werte", href: "/" },
-    { label: "Mitgliedschaft", href: "/" },
+    { label: "Ziele", href: "/#goals" },
+    { label: "Werte", href: "/#values" },
+    { label: "Mitgliedschaft", href: "/membership" },
     { label: "Kontakt", href: "/" },
     { label: "Spenden", href: "/" },
   ];
