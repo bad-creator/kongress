@@ -20,12 +20,12 @@ const Header = () => {
     { label: "Ziele", href: "/#goals" },
     { label: "Werte", href: "/#values" },
     { label: "Mitgliedschaft", href: "/membership" },
-    { label: "Kontakt", href: "/" },
-    { label: "Spenden", href: "/" },
+    { label: "Kontakt", href: "/#contact" },
+    { label: "Spenden", href: "/#bank" },
   ];
 
   return (
-    <header className="px-5 fixed h-[100px] w-full bg-black flex flex-row justify-center z-50">
+    <header className="px-5 fixed h-[50px] md:h-[100px] w-full bg-black flex flex-row justify-center z-50">
       <div className="w-full flex flex-row items-center justify-between">
         {/* Логотип */}
         <Link href="/">
@@ -40,7 +40,7 @@ const Header = () => {
 
         {/* Кнопка меню для мобильных устройств */}
         <button
-          className="text-text-secondary md:hidden focus:outline-none"
+          className="text-text-secondary md:hidden focus:outline-none p-5"
           onClick={toggleMenu}
         >
           <svg
@@ -63,14 +63,18 @@ const Header = () => {
         <ul
           className={`${
             menuOpen ? "flex" : "hidden"
-          } flex-col md:flex md:flex-row gap-6 items-center absolute md:static top-20 left-0 w-full md:w-auto bg-black md:bg-transparent p-4 md:p-0`}
+          } flex-col md:flex md:flex-row md:gap-6 items-center absolute md:static top-[50px] left-0 w-full md:w-auto bg-black md:bg-transparent p-4 md:p-0`}
         >
           {menuItems.map((item, index) => (
             <li
               key={index}
-              className="text-text-secondary hover:text-text-secondaryHover"
+              className="text-text-secondary hover:text-text-secondaryHover w-full flex justify-center"
             >
-              <Link href={item.href} onClick={closeMenu}>
+              <Link
+                href={item.href}
+                onClick={closeMenu}
+                className="text-center py-4 w-full"
+              >
                 {item.label}
               </Link>
             </li>

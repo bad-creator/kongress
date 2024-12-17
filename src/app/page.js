@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="">
       <section className="h-screen bg-[url('../images/headerImg.png')] bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center md:bg-fixed">
-        <div className="container mx-auto px-2 lg:px-12 2xl:max-w-[1280px]">
+        <div className="container mx-auto px-2 lg:px-12 max-w-[1280px]">
           <h1 className="font-heading text-5xl md:text-6xl md:leading-relaxed text-text-primary font-bold leading-normal xl:text-7xl">
             Der Kongress im Überblick
           </h1>
@@ -31,7 +31,7 @@ export default function Home() {
             <h2 className="text-text-primary text-2xl font-semibold">
               Jorge Mario Bergoglio
             </h2>
-            <Link href="/">
+            <Link href="/#bank">
               <div className="rounded-xl inline border-2 border-text-secondary p-2 px-7 text-3xl hover:bg-text-secondary hover:py-3 hover:text-black transition duration-400 ease-in-out">
                 Spenden
               </div>
@@ -85,7 +85,7 @@ export default function Home() {
       </section>
       <section
         id="goals"
-        className="scroll-mt-[100px] bg-[#242929]  md:px-[50px]"
+        className="scroll-mt-[50px] md:scroll-mt-[100px] bg-[#242929]  md:px-[50px]"
       >
         <div className="w-screen md:w-full md:py-10 flex flex-row justify-center items-center">
           <div className="flex flex-row justify-center relative">
@@ -150,122 +150,147 @@ export default function Home() {
       </section>
       <section
         id="values"
-        className="scroll-mt-[100px] bg-[url('../images/werte.png')] h-screen bg-no-repeat bg-cover bg-center"
+        className="scroll-mt-[50px] md:scroll-mt-[100px] bg-[url('../images/werte.png')] h-screen bg-no-repeat bg-cover bg-center"
       >
-        <div className="flex flex-col justify-center h-full mx-auto px-4">
+        <div className="flex flex-col justify-center h-full mx-auto px-4 max-w-[1280px]">
           <h2 className="font-heading text-4xl md:text-[5rem] font-bold text-text-primary md:text-center">
             UNSERE WERTE
           </h2>
-          <h3 className="text-text-primary text-[16rem] hidden">"</h3>
-          <p className="text-text-secondary text-xl md:w-[50%] pt-8 md:pt-10 md:text-right">
-            Denn so sehr hat Gott die Welt geliebt, dass er seinen eingeborenen
-            Sohn hingab, damit alle, die an ihn glauben, nicht verloren werden,
-            sondern ewiges Leben haben. Denn Gott hat seinen Sohn nicht in die
-            Welt gesandt, um die Welt zu verurteilen, sondern damit die Welt
-            durch ihn gerettet wird.
-          </p>
-          <p className="text-accent font-semibold">Johannes 3:16-17 ESV</p>
-        </div>
-      </section>
-      {/* <section className="bg-[url('../images/marmor.png')] min-h-screen bg-no-repeat bg-cover grid gap-x-4 grid-cols-2 grid-rows-4">
-        <Image src={KindHands} alt="kinder hände" />
-        <div className="flex flex-col justify-center">
-          <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
-            kultur
-          </h2>
-          <p className="text-black text-center pt-4">
-            Die ukrainische Kultur ist reich an Traditionen und Ausdrucksformen
-            wie Musik, Tanz, Literatur und Handwerk, die tief in der Identität
-            des ukrainischen Volkes verwurzelt sind. Sie fördert
-            Gemeinschaftssinn und Solidarität und spielt eine entscheidende
-            Rolle bei der Bewahrung der nationalen Identität. In
-            herausfordernden Zeiten zeigt sich die Stärke und Resilienz der
-            Kultur, die Hoffnung und Inspiration für eine bessere Zukunft
-            bietet.
-          </p>
-        </div>
-        <div className="flex flex-col justify-center">
-          <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
-            KIRCHE
-          </h2>
-          <p className="text-black text-center pt-4">
-            Die Kirche spielt eine zentrale Rolle im Leben vieler Menschen,
-            insbesondere in schwierigen Zeiten. Sie ist nicht nur ein Ort des
-            Glaubens, sondern auch eine Quelle der Hoffnung, Gemeinschaft und
-            Unterstützung. Durch ihre moralische Führung und humanitären
-            Bemühungen trägt die christliche Kirche wesentlich zur Stärkung des
-            Zusammenhalts bei und bietet spirituelle Orientierung auf dem Weg zu
-            Frieden und Heilung.
-          </p>
-        </div>
-        <Image src={Kirche} alt="kirche" />
-        <Image src={Herz} alt="herz" />
-        <div className="flex flex-col justify-center">
-          <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
-            LEBEN
-          </h2>
-          <p className="text-black text-center pt-4">
-            Das Leben miteinander basiert auf Werten wie Respekt, Zusammenarbeit
-            und gegenseitiger Unterstützung. In einer vielfältigen Gesellschaft
-            ist es entscheidend, unterschiedliche Perspektiven zu schätzen und
-            gemeinsame Ziele zu verfolgen. Durch den Austausch von Ideen und
-            Erfahrungen stärken wir den Zusammenhalt und schaffen ein
-            harmonisches Miteinander. Gemeinsam können wir Herausforderungen
-            bewältigen und eine Zukunft gestalten, die für alle von Nutzen ist.
-          </p>
-        </div>
-        <div className="flex flex-col justify-center">
-          <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
-            IDENTITÄT
-          </h2>
-          <p className="text-black text-center pt-4">
-            Der Kongress versteht sich als globale Plattform für alle, die sich
-            für den Frieden, die Einheit und den Wiederaufbau der Ukraine
-            einsetzen. Gegründet aus der Überzeugung, dass nur gemeinsames
-            Handeln langfristigen Wandel bewirken kann, vereinen wir Ukrainer
-            und Unterstützer weltweit. Unsere Identität ist geprägt von
-            Solidarität, kultureller Verbundenheit und dem unerschütterlichen
-            Willen, eine friedliche Zukunft für die Ukraine zu gestalten.
-          </p>
-          <Link
-            href={"/"}
-            className="bg-black text-white px-2 py-4 text-center rounded-xl"
-          >
-            SPENDEN
-          </Link>
-        </div>
-        <Image src={Kopf} alt="kopf" />
-      </section>
-      <section className="bg-[url('../images/form-background.png')] min-h-screen bg-no-repeat bg-cover grid gap-x-4 grid-cols-2 place-items-center">
-        <form action="#" className="flex flex-col">
-          <label htmlFor="email">Ihr E-Mail</label>
-          <input type="email" name="email" />
-          <label htmlFor="name">Ihr Name</label>
-          <input type="text" name="name" />
-          <label htmlFor="phone">Ihre Telefonnummer</label>
-          <input type="number" name="phone" />
-          <label htmlFor="message">Ihre Nachricht</label>
-          <input type="text" name="message" />
-          <button type="submit">SENDEN</button>
-        </form>
-        <div>
-          <h2 className="font-heading text-text-primary text-4xl uppercase">
-            Bankverbindung
-          </h2>
-          <p className="text-text-secondary">
-            Weltkongress der Ukrainer für Frieden und Wiederaufbau
-          </p>
-          <p className="text-white">
-            <span className="text-text-secondary">IBAN:</span>
-            AT69 1400 0244 1004 3684
-          </p>
 
-          <p className="text-white">
-            <span className="text-text-secondary">BIC (SWIFT): </span>
-            BAWAATWW
-          </p>
+          <div className="md:flex md:flex-col md:items-end">
+            <h3 className="text-text-primary text-[16rem] hidden md:block leading-tight">
+              "
+            </h3>
+            <p className="text-text-secondary text-xl md:w-1/2 pt-8 md:pt-0 md:text-right">
+              Denn so sehr hat Gott die Welt geliebt, dass er seinen
+              eingeborenen Sohn hingab, damit alle, die an ihn glauben, nicht
+              verloren werden, sondern ewiges Leben haben. Denn Gott hat seinen
+              Sohn nicht in die Welt gesandt, um die Welt zu verurteilen,
+              sondern damit die Welt durch ihn gerettet wird.
+            </p>
+            <p className="text-accent text-xl font-semibold md:self-start text-right">
+              Johannes 3:16-17 ESV
+            </p>
+          </div>
         </div>
-      </section> */}
+      </section>
+      <section className="bg-[url('../images/marmor.png')] min-h-screen bg-no-repeat bg-cover bg-center py-8 px-4">
+        <div className="grid gap-y-8 md:gap-y-0  md:gap-x-0 grid-cols-1 md:grid-cols-2 md:grid-rows-4 max-w-[1280px] mx-auto">
+          <Image
+            src={KindHands}
+            alt="kinder hände"
+            className="order-1 md:order-none"
+          />
+          <div className="flex flex-col justify-center order-2 md:order-none">
+            <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
+              kultur
+            </h2>
+            <p className="text-black text-center pt-4">
+              Die ukrainische Kultur ist reich an Traditionen und
+              Ausdrucksformen wie Musik, Tanz, Literatur und Handwerk, die tief
+              in der Identität des ukrainischen Volkes verwurzelt sind. Sie
+              fördert Gemeinschaftssinn und Solidarität und spielt eine
+              entscheidende Rolle bei der Bewahrung der nationalen Identität. In
+              herausfordernden Zeiten zeigt sich die Stärke und Resilienz der
+              Kultur, die Hoffnung und Inspiration für eine bessere Zukunft
+              bietet.
+            </p>
+          </div>
+          <div className="flex flex-col justify-center order-4 md:order-none">
+            <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
+              KIRCHE
+            </h2>
+            <p className="text-black text-center pt-4">
+              Die Kirche spielt eine zentrale Rolle im Leben vieler Menschen,
+              insbesondere in schwierigen Zeiten. Sie ist nicht nur ein Ort des
+              Glaubens, sondern auch eine Quelle der Hoffnung, Gemeinschaft und
+              Unterstützung. Durch ihre moralische Führung und humanitären
+              Bemühungen trägt die christliche Kirche wesentlich zur Stärkung
+              des Zusammenhalts bei und bietet spirituelle Orientierung auf dem
+              Weg zu Frieden und Heilung.
+            </p>
+          </div>
+          <Image src={Kirche} alt="kirche" className="order-3 md:order-none" />
+          <Image src={Herz} alt="herz " className="order-5 md:order-none" />
+          <div className="flex flex-col justify-center order-6 md:order-none">
+            <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
+              LEBEN
+            </h2>
+            <p className="text-black text-center pt-4">
+              Das Leben miteinander basiert auf Werten wie Respekt,
+              Zusammenarbeit und gegenseitiger Unterstützung. In einer
+              vielfältigen Gesellschaft ist es entscheidend, unterschiedliche
+              Perspektiven zu schätzen und gemeinsame Ziele zu verfolgen. Durch
+              den Austausch von Ideen und Erfahrungen stärken wir den
+              Zusammenhalt und schaffen ein harmonisches Miteinander. Gemeinsam
+              können wir Herausforderungen bewältigen und eine Zukunft
+              gestalten, die für alle von Nutzen ist.
+            </p>
+          </div>
+          <div className="flex flex-col justify-center order-8 md:order-none min-h-fit">
+            <h2 className="uppercase font-heading text-black text-center font-semibold text-4xl">
+              IDENTITÄT
+            </h2>
+            <p className="text-black text-center pt-4">
+              Der Kongress versteht sich als globale Plattform für alle, die
+              sich für den Frieden, die Einheit und den Wiederaufbau der Ukraine
+              einsetzen. Gegründet aus der Überzeugung, dass nur gemeinsames
+              Handeln langfristigen Wandel bewirken kann, vereinen wir Ukrainer
+              und Unterstützer weltweit. Unsere Identität ist geprägt von
+              Solidarität, kultureller Verbundenheit und dem unerschütterlichen
+              Willen, eine friedliche Zukunft für die Ukraine zu gestalten.
+            </p>
+            <div className="mt-4 flex justify-center">
+              <Link
+                href={"/#bank"}
+                className="bg-black text-white py-4 px-8 mt-4 text-center rounded-xl"
+              >
+                SPENDEN
+              </Link>
+            </div>
+          </div>
+          <Image src={Kopf} alt="kopf" className="order-7 md:order-none" />
+        </div>
+      </section>
+      <section className="bg-[url('../images/form-background.png')] min-h-screen bg-no-repeat bg-cover bg-center">
+        <div className="grid md:gap-x-10 grid-cols-1 md:grid-cols-2 py-8 px-4 h-full min-h-screen max-w-[1280px] mx-auto">
+          <form
+            id="contact"
+            action="#"
+            className="flex flex-col md:h-full justify-center"
+          >
+            <label htmlFor="email">Ihr E-Mail</label>
+            <input type="email" name="email" />
+            <label htmlFor="name">Ihr Name</label>
+            <input type="text" name="name" />
+            <label htmlFor="phone">Ihre Telefonnummer</label>
+            <input type="number" name="phone" />
+            <label htmlFor="message">Ihre Nachricht</label>
+            <input type="text" name="message" />
+            <button type="submit">SENDEN</button>
+          </form>
+          <div
+            id="bank"
+            className="flex flex-col justify-center md:text-xl lg:text-2xl"
+          >
+            <h2 className="font-heading text-text-primary text-3xl md:text-4xl uppercase">
+              Bankverbindung
+            </h2>
+            <p className="text-text-secondary pt-4">
+              Weltkongress der Ukrainer für Frieden und Wiederaufbau
+            </p>
+            <p className="text-white">
+              <span className="text-text-secondary">IBAN:</span>
+              AT69 1400 0244 1004 3684
+            </p>
+
+            <p className="text-white">
+              <span className="text-text-secondary">BIC (SWIFT): </span>
+              BAWAATWW
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
