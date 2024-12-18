@@ -4,8 +4,6 @@ import Logo from "../images/wcu_logo5.png";
 import Unsere from "../images/unsere.png";
 import Ziele from "../images/ziele.png";
 import UserCard from "@/components/userCard/UserCard";
-import Sab from "../images/sabine.jpg";
-import Gud from "../images/gudenus.jpg";
 import Hands from "../images/hands.png";
 import Mission from "../images/mission.png";
 import KindHands from "../images/kindern-kultur.jpg";
@@ -59,7 +57,7 @@ export default function Home() {
         <div className="w-full px-[50px] max-w-[1280px]">
           <div className="flex flex-col md:flex-row justify-between gap-14 items-center w-full py-50px">
             <UserCard
-              image={Gud}
+              image={"/images/gudenus.jpg"}
               name={"Johann Lorentz Gudenus"}
               role={"Präsident"}
               description={
@@ -73,7 +71,7 @@ export default function Home() {
               <Image src={Logo} alt="Icon" />
             </div>{" "}
             <UserCard
-              image={Sab}
+              image={"/images/sabine.jpg"}
               name={"Priv. Doz. Dr. Sabina Savcenco"}
               role={"Sekretärin"}
               description={

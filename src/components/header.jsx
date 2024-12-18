@@ -25,7 +25,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="px-5 fixed h-[50px] md:h-[100px] w-full bg-black flex flex-row justify-center z-50">
+    <header className="md:px-5 fixed h-[50px] md:h-[100px] w-full bg-black flex flex-row justify-center z-50">
       <div className="w-full flex flex-row items-center justify-between">
         {/* Логотип */}
         <Link href="/">
@@ -73,7 +73,7 @@ const Header = () => {
               <Link
                 href={item.href}
                 onClick={closeMenu}
-                className="text-center py-4 w-full"
+                className="text-center text-xl py-4 w-full"
               >
                 {item.label}
               </Link>
