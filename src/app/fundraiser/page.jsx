@@ -2,10 +2,10 @@ import Link from "next/link";
 export default function Fundraiser() {
   return (
     <main>
-      <section className="bg-[url('/images/fundraiser/image7.png')] pt-[50px] bg-cover  bg-no-repeat">
-        <div className="bg-black/50 w-full min-h-screen px-4">
-          <div className="flex flex-col justify-center items-center gap-11">
-            <h1 className="text-center font-heading pt-[100px] font-bold text-3xl">
+      <section className="bg-[url('/images/fundraiser/image7.png')] bg-cover bg-no-repeat">
+        <div className="bg-black/50 w-full px-4">
+          <div className="flex flex-col justify-center items-center gap-11 min-h-[calc(100vh-75px)] pt-[50px]">
+            <h1 className="text-center font-heading font-bold text-2xl">
               SPENDENSAMMLUNG ZUM GESEGNTEN GEDENKEN AN ERZHERZOG FRANZ
               FERDINAND
             </h1>
@@ -18,15 +18,18 @@ export default function Fundraiser() {
           </div>
         </div>
       </section>
-      <section className="bg-[#f4d35e]">
+      <section className="bg-[#f4d35e] px-4 py-8">
         <div className="grid grid-cols-1">
-          <div className="flex flex-col">
-            <h2 className="font-heading font-bold text-[#505581]">
+          <div className="flex flex-col gap-2">
+            <h2 className="font-heading font-bold text-[#505581] text-center text-2xl">
               WOFÜR SAMMELN WIR SPENDEN?
             </h2>
-            <p>Weltkongress der Ukrainer für Frieden und Wiederaufbau</p>
-            <div></div>
-            <p>
+            <p className="text-[#505581] text-center text-xl">
+              Weltkongress der Ukrainer für Frieden und Wiederaufbau
+            </p>
+            <div className="border-b-2 border-[#505581]"></div>
+            <p className="bg-[url('/images/fundraiser/ferdinand.jpg')] h-[500px]"></p>
+            <p className="text-[#505581] font-bold text-xl text-center">
               Unser Ziel ist es, einen bestimmten Spendenbetrag zu sammeln, um
               den Transport, die Unterbringung sowie umfassende medizinische
               Dienstleistungen in der Republik Österreich für die Kriegsopfer zu
