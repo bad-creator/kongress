@@ -1,5 +1,5 @@
-// import Freundshaft from "/images/members/four-hands.png";
 import Image from "next/image";
+import Link from "next/link";
 export default function Membership() {
   return (
     <main className="pt-[50px] md:pt-[100px]">
@@ -42,9 +42,12 @@ export default function Membership() {
             Zeichen der Unterstützung – sie ist ein aktiver Schritt in Richtung
             einer friedlicheren und stabileren Zukunft.
           </p>
-          <button className="bg-[#fccd04] text-[#2f4386] px-4 py-2 rounded-md">
+          <Link
+            href={"/karl1"}
+            className="bg-[#fccd04] text-[#2f4386] px-4 py-2 rounded-md"
+          >
             Mehr Details
-          </button>
+          </Link>
         </div>
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2">
@@ -151,9 +154,12 @@ export default function Membership() {
             Republik Österreich für die Kriegsopfer zu gewährleisten.
           </p>
           <div>
-            <button className="bg-[#2f4386] text-[#fccd04] px-4 py-2 rounded-md">
+            <Link
+              href={"/fundraiser"}
+              className="bg-[#2f4386] text-[#fccd04] px-4 py-2 rounded-md"
+            >
               Mehr Details
-            </button>
+            </Link>
           </div>
         </div>
       </section>
